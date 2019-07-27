@@ -1,0 +1,14 @@
+ 
+  .copy {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    a {
+      display: inline-block;
+      margin: 4px;
+    }
+    img {
+      height: 40px;
+    }
+  }

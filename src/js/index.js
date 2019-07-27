@@ -1,6 +1,6 @@
 import "bootstrap"
-
-import "../scss/index.scss"
+import "../scss/welcome.scss"
+import "./todo"
 
 var open = false
 
@@ -39,4 +39,5 @@ window.onresize = function() {
     })
   }
 }
-// Your jQuery code
+
+
