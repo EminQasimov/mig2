@@ -28,4 +28,11 @@ a {
   max-width: 1500px;
   margin: 0 auto;
 }
- 
+
+.activeLink {
+  color: #f24704 !important;
+  // border-bottom: 2px solid #f24704 !important;
+  &::after {
+    bottom: 0px;
+  }
+}

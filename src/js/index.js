@@ -1,6 +1,6 @@
 import "bootstrap"
 import "../scss/welcome.scss"
-import "./todo"
+import "./todo.js"
 
 var open = false
 

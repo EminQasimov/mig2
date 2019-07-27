@@ -1,9 +1,9 @@
 {
   "name": "migration",
-  "homepage": "https://xxhomey19.github.io/bootstrap-webpack-jquery-boilerplate/",
+  "homepage": "https://github.com/EminQasimov/mig.git",
   "repository": {
     "type": "git",
-    "url": "https://github.com/xxhomey19/bootstrap-webpack-jquery-boilerplate/tree/master"
+    "url": "https://github.com/EminQasimov/mig/tree/master"
   },
   "scripts": {
     "build": "webpack -p --progress --mode production --config webpack.config.js",
@@ -17,7 +17,8 @@
   "dependencies": {
     "bootstrap": "^4.3.1",
     "jquery": "^3.4.1",
-    "popper.js": "^1.15.0"
+    "popper.js": "^1.15.0",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",

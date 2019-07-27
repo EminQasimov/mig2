@@ -1,29 +1,62 @@
 import "../scss/todo.scss"
- 
- 
- 
- /*
-    Carousel
-*/
-$('#carousel-example').on('slide.bs.carousel', function (e) {
-    /*
-        CC 2.0 License Iatek LLC 2018 - Attribution required
-    */
-    var $e = $(e.relatedTarget);
-    var idx = $e.index();
-    var itemsPerSlide = 5;
-    var totalItems = $('.carousel-item').length;
-  
-    if (idx >= totalItems-(itemsPerSlide-1)) {
-        var it = itemsPerSlide - (totalItems - idx);
-        for (var i=0; i<it; i++) {
-            // append slides to end
-            if (e.direction=="left") {
-                $('.carousel-item').eq(i).appendTo('.carousel-inner');
-            }
-            else {
-                $('.carousel-item').eq(0).appendTo('.carousel-inner');
-            }
+import "slick-carousel"
+
+$(document).ready(function() {
+  $(".content").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    initialSlide: 4,
+    autoplay: false,
+    swipe: false,
+    draggable: false
+  })
+
+  $(".slider").slick({
+    slidesToShow: 6,
+    slidesToScroll: 2,
+    infinite: true,
+    nextArrow: $(".next"),
+    prevArrow: $(".prev"),
+    autoplay: false,
+    draggable: false,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3
         }
-    }
-  });
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 400,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
+  })
+  $(".slick-slide").off()
+
+  window.addEventListener("resize", function() {
+    $(".slick-slide").off()
+  })
+
+  $(".todoitems .slick-slider")
+    .find(`[data-slick-index=4]`)
+    .addClass("activeSlide")
+
+  $(".todoitems .slick-slider").on("click", ".slick-slide", function(e) {
+    var slideClicked = $(e.currentTarget).attr("data-slick-index")
+    $(".slick-slide").removeClass("activeSlide")
+    $(e.currentTarget).addClass("activeSlide")
+    $(".content").slick("slickGoTo", slideClicked)
+    e.stopPropagation()
+  })
+})
