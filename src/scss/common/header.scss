@@ -136,7 +136,7 @@ menu {
     }
     &:hover {
       text-decoration: none;
-      color: #f24704;
+      color: #f24704 !important;
       &::after {
         bottom: 0px;
       }

@@ -2,7 +2,8 @@ import "bootstrap"
 import "../scss/welcome.scss"
 import "./todo"
 import "./azerbaijanis"
- 
+import "./places"
+
 var open = false
 
 $(".menu-icon").click(function() {
@@ -40,3 +41,9 @@ window.onresize = function() {
     })
   }
 }
+
+// delete thisssss !!!!!!!!! its for git deploy
+$(".nav-item:first-child .nav-link").click(function(e){
+  e.preventDefault()
+  window.location.replace("https://" + window.location.hostname + "/mig")
+})

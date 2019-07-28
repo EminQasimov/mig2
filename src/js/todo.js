@@ -37,12 +37,14 @@ $(document).ready(function() {
       {
         breakpoint: 600,
         settings: {
+          slidesToScroll: 1,
           slidesToShow: 2
         }
       },
       {
         breakpoint: 400,
         settings: {
+          slidesToScroll: 1,
           slidesToShow: 1
         }
       }

@@ -141,6 +141,9 @@
       top: 0;
       background: #7519b0;
       transform: translate(55%, -25%) rotate(45deg);
+      @media (max-width: 768px){
+        display: none;
+      }
     }
     .container {
       display: flex;

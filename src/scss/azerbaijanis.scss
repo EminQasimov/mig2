@@ -89,6 +89,9 @@
       border-bottom-color: transparent;
       border-right-color: transparent;
       position: absolute; 
+      @media screen and (max-width: 768px) {
+        display: none
+      }
     }
   }
   .text3 {
