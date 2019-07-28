@@ -14,7 +14,7 @@ $(document).ready(function() {
   })
 
   $(".slider").slick({
-    slidesToShow: 6,
+    slidesToShow: 5,
     slidesToScroll: 2,
     infinite: true,
     nextArrow: $(".next"),
@@ -22,6 +22,12 @@ $(document).ready(function() {
     autoplay: false,
     draggable: false,
     responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 5
+        }
+      },
       {
         breakpoint: 1024,
         settings: {

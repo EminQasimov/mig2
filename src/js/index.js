@@ -27,7 +27,7 @@ $(".menu-icon").click(function() {
 })
 
 window.onresize = function() {
-  if (window.innerWidth > 1000) {
+  if (window.innerWidth > 1024) {
     open = false
     $(".menu-list").css({
       display: "flex",
