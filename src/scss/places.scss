@@ -1,8 +1,9 @@
-@import "../scss/common/index.scss";
-@import "../scss/common/header.scss";
-@import "../scss/common/footer.scss";
+// @import "../scss/common/index.scss";
+// @import "../scss/common/header.scss";
+// @import "../scss/common/footer.scss";
 
 .places {
+  padding-right: 0 !important;
   .hero {
     background: url("../public/images/placesbg.jpg") center / cover;
   }
@@ -11,6 +12,7 @@
     flex-wrap: wrap;
     margin-left: -1px;
     margin-right: -1px;
+    margin-top: -1px;
     margin-bottom: 50px;
   }
   .gradient {
@@ -29,6 +31,9 @@
       );
       position: absolute;
       bottom: 0;
+      @media screen and (max-width: 768px) {
+        height: 150px;
+      }
     }
   }
   .btn-load-more {
@@ -45,7 +50,7 @@
     padding-bottom: 50px;
     clip-path: polygon(50% 100%, 100% 0, 0 0);
     display: block;
-    transition: opacity 0.3s;
+    transition: all 0.3s;
     margin-left: 50%;
     transform: translateX(-50%);
     z-index: 999;
@@ -53,6 +58,16 @@
     bottom: -20px;
     &:hover {
       opacity: 0.7;
+      transform: translateX(-50%) scale(0.98);
+    }
+    &:active {
+      opacity: 0.7;
+      transform: translateX(-50%) scale(0.9);
+    }
+    @media screen and (max-width: 768px) {
+      font-size: 16px;
+      width: 150px;
+      height: 80px;
     }
   }
 
@@ -91,9 +106,11 @@
       background: rgba(119, 57, 186, 0.7);
       opacity: 0;
       color: #fff;
-
       transition: all 0.3s;
       perspective: 600px;
+      p:nth-child(2){
+        display: none;
+      }
     }
     .info-img {
       width: 100%;
@@ -104,6 +121,7 @@
       position: absolute;
       top: 70%;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+     
       span {
         transform: rotateZ(-45deg) translate(4%, -50%);
         display: block;
@@ -111,6 +129,13 @@
         @media (max-width: 768px) {
           font-size: 12px;
           transform: rotateZ(-45deg) translate(-3%, -50%);
+        }
+        @media (max-width: 500px) {
+          font-size: 10px;
+          transform: rotateZ(-45deg) translate(-5%, -50%);
+        }
+        &::after{
+          content: "ətraflı"
         }
         &::before {
           content: " ";
@@ -121,6 +146,10 @@
           display: inline-block;
           vertical-align: middle;
           margin: 4px;
+          @media (max-width: 500px) {
+            width: 20px;
+            height: 10px;
+          }
         }
       }
     }
@@ -136,5 +165,50 @@
       width: 100%;
       height: 100%;
     }
+  }
+
+  .close {
+    color: #fff;
+    font-size: 14px;
+    background: #f24704;
+    opacity: 1;
+    height: 30px;
+    width: 30px;
+  }
+  .modal-body {
+    display: flex;
+    @media (max-width: 992px){
+      display: block;
+      img{
+        width: 100% !important;
+      }
+      .modal-text{
+        padding: 0;
+      }
+    }
+  }
+  .modal-content {
+    border-radius: 0;
+    img {
+      width: 300px;
+      height: 350px;
+    }
+    p{
+      font-size: 16px;
+      @media (max-width: 1199px){
+        font-size: 13px;
+      }
+    }
+  
+  }
+  .modal-title {
+    color: #f24704;
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 8px;
+  }
+  .modal-text {
+    flex: 1;
+    padding: 0 20px;
   }
 }
