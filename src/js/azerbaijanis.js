@@ -1,1 +1,1 @@
- 
+ import "../scss/azerbaijanis.scss";

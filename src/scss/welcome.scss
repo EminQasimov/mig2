@@ -193,31 +193,7 @@
       }
     }
   }
-  
-  .menu-icon{
-    display: none;
-  }
-  
-  @media (max-width: 1000px) {
-    nav ul.menu-list{
-      display: none;
-      li{
-        padding: 8px;
-      }
-    }
-    .menu-icon{
-      background: #fff;
-      cursor: pointer;
-      display: block ;
-      transition: all .3s;
-      margin-left: auto;
-      margin-right: 140px; 
-      padding: 4px;
-      &:hover{
-        opacity: 0.8;
-      }
-    }
-  }
+   
   
   @media (max-width: 576px) {
     .info::before {

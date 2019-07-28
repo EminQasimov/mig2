@@ -1,3 +1,74 @@
 @import "../scss/common/index.scss";
 @import "../scss/common/header.scss";
 @import "../scss/common/footer.scss";
+
+.az {
+  .hero {
+    background: #9783a3 url(../public/images/azerisbg.jpg) center / cover
+      no-repeat;
+  }
+
+  .container {
+    font-size: 24px;
+    @media screen and (max-width: 1000px) {
+      font-size: 20px;
+      .col-8 {
+        padding-right: 0px !important;
+      }
+    }
+    @media screen and (max-width: 768px) {
+      .row {
+        flex-direction: column !important;
+      }
+      .col-4,
+      .col-8 {
+        max-width: 100%;
+        text-align: center;
+      }
+    }
+    img {
+      max-width: 100%;
+      transform: scale(0.9);
+      transform-origin: left center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  .text1,
+  .text3 {
+    margin-top: 60px;
+    .col-8 {
+      margin-left: -30px;
+      padding-right: 80px;
+    }
+    span {
+      color: #f24704;
+    }
+    h2 {
+      color: #f24704;
+      font-size: 1.8em;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+    p {
+    }
+  }
+
+  .text2 {
+    margin-top: -50px;
+    .col-8 {
+      padding-right: 100px;
+    }
+    p {
+      margin-top: 50px;
+    }
+    img {
+      transform: scale(1);
+      box-shadow: none;
+    }
+  }
+  .text3 {
+    margin-top: 0px;
+    margin-bottom: 100px;
+  }
+}
