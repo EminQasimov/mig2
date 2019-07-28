@@ -16,7 +16,7 @@
     height: 100%;
     display: block;
   }
-  .nav-menu {
+  nav {
     display: flex;
     align-items: center;
     padding: 30px 60px;
@@ -26,16 +26,6 @@
       &:hover {
         opacity: 0.8;
       }
-    }
-  }
-  nav {
-    padding: 0;
-    li{
-      padding: 0 20px;
-    }
-    .nav-link {
-      padding: 0 20px;
-      color: #fff !important;
     }
   }
   h1 {
@@ -83,8 +73,8 @@
 
   a {
     display: block;
-    padding: 10px 14px;
-    font-size: 12px;
+    padding: 10px;
+    font-size: 14px;
     color: #fff;
     background: #7519b0;
     transform: scaleY(0);
@@ -104,8 +94,8 @@
     }
   }
   img {
-    width: 26px;
-    height: 16px;
+    width: 30px;
+    height: 20px;
     margin-right: 10px;
   }
 }
@@ -151,6 +141,27 @@ menu {
       display: block;
       transition: all 0.3s;
       left: 0;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  nav ul.menu-list {
+    display: none;
+    li {
+      padding: 8px;
+    }
+  }
+  .menu-icon {
+    background: #fff;
+    cursor: pointer;
+    display: block;
+    transition: all 0.3s;
+    margin-left: auto;
+    margin-right: 140px;
+    padding: 4px;
+    &:hover {
+      opacity: 0.8;
     }
   }
 }
