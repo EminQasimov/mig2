@@ -99,9 +99,16 @@
     margin-right: 10px;
   }
 }
-
+.navbar-light .navbar-toggler {
+  border: none !important;
+  padding: 20px;
+}
 menu {
   background: #f1f1f1;
+  nav {
+    padding: 0 !important;
+    width: 100%;
+  }
   .wrapper {
     display: flex;
     flex-wrap: no-wrap;
@@ -109,12 +116,12 @@ menu {
     align-items: center;
     justify-content: center;
   }
-  a {
+  .nav-link {
     display: flex;
     align-items: center;
     height: 80px;
-    padding: 16px 20px;
-    border-right: 2px solid #fff;
+    padding: 16px 20px !important;
+    border-right: 2px solid #fff !important;
     font-size: 16px;
     color: #333;
     transition: all 0.3s;
@@ -163,5 +170,13 @@ menu {
     &:hover {
       opacity: 0.8;
     }
+  }
+}
+
+.activeLink {
+  color: #f24704 !important;
+  // border-bottom: 2px solid #f24704 !important;
+  &::after {
+    bottom: 0px !important;
   }
 }
