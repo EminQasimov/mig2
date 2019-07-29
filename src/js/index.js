@@ -3,6 +3,7 @@ import '../scss/welcome.scss';
 import './todo';
 import './azerbaijanis';
 import './places';
+import './location';
 
 var open = false;
 
