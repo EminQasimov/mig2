@@ -50,6 +50,7 @@ $(document).ready(function() {
       },
     ],
   });
+
   $('.slick-slide').off();
 
   window.addEventListener('resize', function() {

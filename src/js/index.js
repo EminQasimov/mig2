@@ -4,6 +4,7 @@ import './todo';
 import './azerbaijanis';
 import './places';
 import './location';
+import './culinary';
 
 var open = false;
 
