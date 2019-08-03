@@ -1,3 +1,38 @@
+ 
+!!!!!! bootstrap - min.css , jquery, popper.js import olunur , html-de onlara link vermeye ehtiyac yoxdur.
+butun 9 html pagein css-i  77kb + bootstrap.min.css olan bir faylda birlesib /dist/css/0.css   
+
+
+sekillerin hamisi yoxdur
+dil elave edilmeyib.
+musiqiler tam, original deyil - big.az seslenir...
+hansi font sualdadir ?
+
+
+
+## Development
+Run development page on **localhost:8080**
+
+```
+$ npm run dev
+```
+
+## Build
+Build for production.
+
+```
+$ npm run build
+```
+
+## Deploy
+Deploy to `gh-pages` branch on GitHub.
+change git url in package.json
+
+```
+$ npm run deploy
+```
+
+
 # Boostrap + Webpack + JQuery Boilerplate
 
 > Build landing page with **Boostrap** and **jQuery** is so easy.
@@ -46,31 +81,6 @@ $ cd bootstrap-webpack-jquery-boilerplate
 $ yarn // or npm install
 ```
 
-## Development
-
-Run development page on **localhost:8080**
-
-```
-$ npm run dev
-```
-
-## Build
-
-Build for production.
-
-```
-$ npm run build
-```
-
-## Deploy
-
-Deploy to `gh-pages` branch on GitHub.
-
-**[DEMO](https://xxhomey19.github.io/bootstrap-webpack-jquery-boilerplate/)**
-
-```
-$ npm run deploy
-```
 
 ## License
 

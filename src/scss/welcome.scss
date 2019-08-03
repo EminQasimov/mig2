@@ -210,6 +210,9 @@
       .container {
         text-align: center;
         display: block;
+        & > img{
+          margin: 0;
+        }
         .img{
           margin: 0;
           display: inline-block;
