@@ -1,10 +1,14 @@
 import 'bootstrap';
 import '../scss/welcome.scss';
+
 import './todo';
 import './azerbaijanis';
 import './places';
 import './location';
 import './culinary';
+import './music';
+import './festivals';
+import './transportation';
 
 var open = false;
 

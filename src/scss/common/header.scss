@@ -3,6 +3,10 @@
   position: relative;
   z-index: 999;
   background: #9783a3 url(../public/images/bg.jpg) center / cover no-repeat;
+  // background-attachment: fixed !important; // i need 100% bg images not half screen
+  // background-position: center 60vh !important;
+  // background-size: 100% 50%;
+
   .wrapper {
     position: relative;
     z-index: 9;
@@ -35,12 +39,14 @@
     text-align: center;
     margin-top: 8%;
     transition: all 0.5s;
-
+    animation: 1.3s ease-out 0s 1 show;
     @media (max-width: 500px) {
       margin-top: 25%;
+      font-size: 2.2rem;
     }
   }
 }
+
 .menu-list {
   display: flex;
   flex: 1;
@@ -51,7 +57,7 @@
 
   a {
     color: #fff;
-    font-size: 16px;
+    font-size: 15px;
     padding: 20px;
     font-weight: 700;
     transition: all 0.3s;
@@ -115,10 +121,15 @@
   border: none !important;
   padding: 20px;
 }
+
+#navbarNav{
+  justify-content: center;
+}
 menu {
   background: #f1f1f1;
-  z-index: 99;
-  position: relative;
+  z-index: 999;
+  box-shadow: 0 0px 1px rgba(0,0,0,0.2);
+  // border-bottom: 1px solid #c6c6c6;
   nav {
     padding: 0 !important;
     width: 100%;
@@ -130,12 +141,15 @@ menu {
     align-items: center;
     justify-content: center;
   }
+  .nav-link.nav-link.nav-link{
+    color: #333;
+  }
   .nav-link {
     display: flex;
     align-items: center;
     height: 80px;
     padding: 16px 20px !important;
-    border-right: 2px solid #fff !important;
+    // border-right: 2px solid #fff !important;
     font-size: 16px;
     color: #333;
     transition: all 0.3s;
@@ -203,5 +217,14 @@ menu {
   // border-bottom: 2px solid #f24704 !important;
   &::after {
     bottom: 0px !important;
+  }
+}
+
+@keyframes show{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
   }
 }
