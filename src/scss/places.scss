@@ -77,7 +77,7 @@
 
   .item {
     display: inline-block;
-    background: tan;
+    background: linear-gradient(to bottom, red, orange);
     width: calc(100% / 3);
     border: 1px solid #fff;
     position: relative;

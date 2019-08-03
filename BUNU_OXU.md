@@ -7,6 +7,8 @@ sekillerin hamisi yoxdur
 dil elave edilmeyib.
 musiqiler tam, original deyil - big.az seslenir...
 hansi font sualdadir ?
+optimize background big images, use webp format
+
 
 
 
