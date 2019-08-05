@@ -48,6 +48,25 @@ window.onresize = function() {
   }
 };
 
+$(function() {
+  $(window).scroll(function() {
+    var sticky = $('.sticky'),
+      scroll = $(window).scrollTop();
+
+    if (scroll >= 100) {
+      $('.hero').css({
+        marginTop: '-30px',
+      });
+      sticky.addClass('fixed');
+    } else {
+      $('.hero').css({
+        marginTop: '0px',
+      });
+      sticky.removeClass('fixed');
+    }
+  });
+});
+
 // // delete thisssss !!!!!!!!! its for git deploy
 // $('.nav-item:first-child .nav-link').click(function(e) {
 //   e.preventDefault();
