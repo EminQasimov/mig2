@@ -40,7 +40,7 @@
         cursor: pointer;
         box-shadow: 0 0 0 2px #fff, 0 0 0 4px #f35213;
         .todo-icon {
-          transform: translateX(-50%) scale(1.01);
+          transform: translateX(-50%) scale(1.01) rotate(360deg);
           box-shadow: 0 0 0 2px #fff, 0 0 0 4px #f35213,
             0 3px 9px 3px rgba(0, 0, 0, 0.31);
         }
@@ -126,6 +126,7 @@
       transform: translateX(-50%) scale(0.99);
       transition: all 0.3s;
       z-index: 9;
+     
       img {
         max-width: 50% !important;
       }
@@ -155,10 +156,10 @@
     .wrapper {
       padding: 0 70px;
       margin-bottom: 100px;
-      @media (max-width: 768px){
-        padding:10px;
+      @media (max-width: 768px) {
+        padding: 10px;
         padding-top: 30px;
-        margin: 0
+        margin: 0;
       }
     }
   }

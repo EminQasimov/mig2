@@ -148,7 +148,7 @@
   justify-content: center;
 }
 .menu-list {
-  @media (max-width: 768px) {
+  @media (max-width:999px) {
     box-shadow:0 3px 14px rgba(54, 31, 69, 0.58);
     transition: animation 0.2s;
     animation: show2 0.3s ease;

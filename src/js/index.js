@@ -9,6 +9,10 @@ import './culinary';
 import './music';
 import './festivals';
 import './transportation';
+import WOW from 'wow.js';
+
+var wow = new WOW({ offset: 0 });
+wow.init();
 
 var open = false;
 

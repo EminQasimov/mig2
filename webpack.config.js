@@ -38,6 +38,7 @@ const config = {
           'sass-loader',
         ],
       },
+
       {
         test: /\.(gif|png|jpe?g|svg)$/i,
         use: [

@@ -18,12 +18,12 @@
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
     border-radius: 3px;
     overflow: hidden;
-    margin: 8px;
+    margin: 18px;
     background: #fff;
-    transform: scale(0.9);
-    transition: transform 0.15s ease-in-out;
+    transform: scale(0.99);
+    transition: all 0.2s ease-in-out;
     position: relative;
-    z-index: 9;
+    z-index: 9; 
 
     &:hover {
       cursor: pointer;
@@ -196,3 +196,6 @@
     }
   }
 }
+
+
+
