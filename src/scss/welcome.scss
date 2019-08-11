@@ -2,200 +2,244 @@
 @import "../scss/common/header.scss";
 @import "../scss/common/footer.scss";
 
-.items {
-  .wrapper {
-    margin-top: 80px;
-    display: flex;
-    justify-content: center;
+$n: 9;
+$size: 640px;
+$half: $size - $size/4.8;
+
+.visa .container {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin: 64px auto;
+  @media (min-width: 576px) {
+    max-width: 100%;
   }
-  .container {
-    display: flex;
-    justify-content: center;
+}
+.cont {
+  min-width: $size;
+  min-height: $size;
+  width: $size;
+  height: $size;
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  display: inline-block;
+  transform: rotate(-1deg);
+  // box-shadow: 0 0 14px #000;
+  @media (max-width: 800px) {
+    transform: rotate(-1deg) scale(0.8);
+    transform-origin: center;
+  }
+  @media (max-width: 600px) {
+    transform: rotate(-1deg) scale(0.66);
   }
 
-  .item {
-    width: 301px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-    border-radius: 3px;
-    overflow: hidden;
-    margin: 18px;
-    background: #fff;
-    transform: scale(0.99);
-    transition: all 0.2s ease-in-out;
-    position: relative;
-    z-index: 9; 
-
-    &:hover {
-      cursor: pointer;
-      transform: scale(1.02);
+  @media (max-width: 450px) {
+    transform: rotate(-1deg) scale(0.45);
+  }
+  .middle {
+    position: absolute;
+    width: 98%;
+    height: 98%;
+    left: 1%;
+    top: 1%;
+    transform: scale(0.46) translateZ(10px);
+    // transition: all 0.2s linear;
+    z-index: 999;
+    background: transparent;
+    display: block;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border: 22px solid #fff;
+    padding: 80px;
+    background-clip: content-box;
+    pointer-events: none;
+    filter: drop-shadow(0 0 64px rgba(63, 19, 2, 0.76));
+    // box-shadow:0 0 220px #111;
+    &::after {
+      content: " ";
+      display: block;
+      width: 20px;
+      height: 20px;
+      border: 60px solid transparent;
+      border-bottom: 60px solid #fff;
+      position: absolute;
+      top: -126px;
+      left: 242px;
     }
   }
-  p {
-    text-align: center;
-    font-size: 17px;
-    color: #333;
-    font-weight: 700;
-    margin: 0;
-    margin-top: 10px;
-    padding: 20px 0;
+  .middle2 {
+    position: absolute;
+    width: 98%;
+    height: 98%;
+    left: 1%;
+    top: 1%;
+    transform: scale(0.46) translateZ(10px);
+    transition: all 0.2s linear;
+    background: transparent;
+    display: block;
+    border-radius: 50%;
+    box-sizing: border-box;
+    padding: 80px;
+    background: url("../public/images/orta.jpg") center / cover;
+    background-clip: content-box;
+    pointer-events: none;
+    z-index: 9999;
   }
 }
 
-.head {
-  width: 100%;
-  height: 53px;
-  position: relative;
-  background: url("../public/images/welcome1.png") center / 314px 188px
-    no-repeat;
-  font-size: 17px;
-  color: #fff;
-  text-align: center;
-  font-weight: 500;
-  img {
-    width: 100%;
-    height: 200%;
+.p {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  transform-origin: right bottom;
+  overflow: hidden;
+  transition: all 300ms;
+  background: #654e78;
+  box-shadow: inset 4px -7px 6px 0px rgba(37, 27, 45, 0.42);
+  &:hover {
+    cursor: pointer;
+    background: #f34705;
+    // z-index: 999;
+    box-shadow: -8px -8px 10px 17px rgba(37, 27, 45, 0.3);
   }
-  span {
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    text-align: center; 
-  }
-} 
-.info {
-  margin: 60px auto;
-  position: relative;
-  &::before {
-    content: " ";
-    width: 300px;
-    height: 300px;
-    position: absolute;
-    left: 0;
-    top: 0;
-    background: #f1e8f7;
-    transform: translate(-60%, -60%) rotate(45deg);
-  }
-
-  .container {
+  .span1 {
+    width: $half;
+    height: $half;
+    box-sizing: border-box;
+    transition: opacity 0.1s linear, transform 0.1s linear;
+    text-align: center;
+    font-size: 15px;
+    background: transparent;
+    color: #fff;
+    user-select: none;
+    margin: -5px -47px;
     display: flex;
     align-items: center;
-    img {
-      margin-left: -50px;
-    }
+    justify-content: center;
   }
-  .text {
-    flex: 1;
-    margin-left: 20px;
-    margin-bottom: 30px;
-
-    h2 {
-      color: #f24704;
-      font-weight: 700;
-      margin-bottom: 20px;
-    }
-    p {
-      font-size: 20px;
-      line-height: 24px;
-      margin-bottom: 40px;
-    }
-  }
-}
-
-.info2 {
-  margin: 60px auto;
-  position: relative;
-  &::before {
-    content: " ";
-    width: 700px;
-    height: 700px;
+  .span2 {
+    display: inline-block;
+    width: 68px;
+    height: 74px;
+    background: #fff;
+    color: black;
     position: absolute;
-    z-index: -3;
-    right: 0;
-    top: 0;
-    background: #7519b0;
-    transform: translate(55%, -25%) rotate(45deg);
-    @media (max-width: 768px) {
+    left: 210px;
+    top: 210px;
+    box-shadow: inset 4px -7px 7px 0px rgba(37, 27, 45, 0.3),
+      inset -4px -7px 5px 0px rgba(37, 27, 45, 0.3),
+      inset 0px 3px 4px 0px rgba(37, 27, 45, 0.3);
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    .img2 {
       display: none;
     }
   }
-  .container {
-    display: flex;
-    align-items: center;
-    .img {
-      position: relative;
-      width: 300px;
-      height: 300px;
-      background: url("../public/images/dance.jpg") center / 400px no-repeat;
-      // clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-      box-shadow: -15px 5px 36px rgba(0, 0, 0, 0.1);
-
-      &::before {
-        content: " ";
-        width: 100%;
-        position: absolute;
-        height: 100%;
-        background: transparent;
-        box-shadow: 0 6px 36px rgba(0, 0, 0, 0.1);
-      }
-    }
-  }
-  .text {
-    flex: 1;
-    margin-left: 20px;
-    margin-bottom: 30px;
-    padding-right: 30px;
-    h2 {
-      color: #f24704;
-      font-weight: 700;
-      margin-bottom: 20px;
-    }
-    p {
-      font-size: 20px;
-      line-height: 24px;
-      margin-bottom: 40px;
-    }
-  }
 }
-
-@media (max-width: 992px) {
-  .items {
-    .container {
-      display: block;
-      text-align: center;
-      .item {
+@for $i from 1 through $n {
+  .pie#{$i} {
+    transform: rotate(#{$i * 360 / $n - 8}deg) skew(#{90 - 360 / $n}deg);
+    z-index: $i;
+    .span1 {
+      transform: skew(#{- (90 - 360 / $n)}deg)
+        rotate(#{-$i * 360 / $n + 8}deg); //reset parent transform
+    }
+    .span2 {
+      transform: rotate(#{$i * 360 / $n - 8}deg)
+        translate(#{-94 + $i}px, #{46 - $i}px);
+    }
+    &:hover ~ .middle {
+      transform: scale(0.46) translateZ(10px) rotate(#{$i * 360 / $n - 80}deg);
+    }
+    &:hover span {
+      .img1 {
+        display: none;
+      }
+      .img2 {
         display: inline-block;
       }
     }
   }
 }
 
-@media (max-width: 576px) {
-  .info::before {
+.pie1 .span2 {
+  transform: rotate(32deg) translate(-83px, 34px);
+  img {
+    transform: scale(0.5) rotate(-33deg);
+  }
+}
+
+.pie2 .span2 {
+  transform: rotate(72deg) translate(-84px, 29px);
+  img {
+    transform: scale(0.6) rotate(-70deg);
+  }
+}
+.pie3 .span2 {
+  transform: rotate(112deg) translate(-92px, 24px);
+  img {
+    transform: scale(0.46) rotate(-113deg);
+  }
+}
+
+.pie4 .span2 {
+  transform: rotate(152deg) translate(-99px, 27px);
+  img {
+    transform: scale(0.46) rotate(-151deg);
+  }
+}
+
+.pie5 .span2 {
+  transform: rotate(192deg) translate(-103px, 31px);
+  img {
+    transform: scale(0.46) rotate(-192deg);
+  }
+}
+
+.pie6 .span2 {
+  transform: rotate(232deg) translate(-105px, 38px);
+  img {
+    transform: scale(0.46) rotate(130deg);
+  }
+}
+
+.pie7 .span2 {
+  transform: rotate(272deg) translate(-100px, 45px);
+  img {
+    transform: scale(0.46) rotate(-90deg);
+  }
+}
+
+.pie8 .span2 {
+  transform: rotate(312deg) translate(-94px, 48px);
+  img {
+    transform: scale(0.46) rotate(49deg);
+  }
+}
+
+.pie9 .span2 {
+  transform: rotate(352deg) translate(-83px, 46px);
+  img {
+    transform: scale(0.46) rotate(10deg);
+  }
+}
+
+.pie1:hover ~ .middle {
+  transform: scale(0.46) translateZ(10px) rotate(319deg);
+}
+
+.selected {
+  cursor: pointer;
+  background: #f34705;
+  z-index: 999;
+  box-shadow: -8px -8px 10px 17px rgba(37, 27, 45, 0.3);
+  .img1 {
     display: none;
   }
-  footer {
-    text-align: center;
-  }
-  .info2,
-  .info {
-    .container {
-      text-align: center;
-      display: block;
-      & > img {
-        margin: 0;
-      }
-      .img {
-        margin: 0;
-        display: inline-block;
-        &::before {
-          position: relative;
-        }
-      }
-    }
+  .img2 {
+    display: inline-block !important;
   }
 }
-
-
-
