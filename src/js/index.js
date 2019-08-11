@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import 'bootstrap';
 import '../scss/welcome.scss';
 
@@ -23,41 +24,41 @@ $('.menu-icon').click(function() {
       display: 'block',
       position: 'absolute',
       background: '#7519b0',
-      right: '118px',
-      top: '31px',
+      left: '0',
+      top: '77px',
+      width: '100%',
     });
+      $('.sticky').css("background","rgb(117, 25, 176)")
   } else {
-    $('.menu-list').css({
-      display: 'none',
-      position: 'absolute',
-      background: '#7519b0',
-      right: '118px',
-      top: '31px',
-    });
+    $('.menu-list').hide();
+    window.scrollY < 30 && $('.sticky').css("background","transparent")
   }
 });
 
 window.onresize = function() {
+  open = false;
+  window.scrollY < 30 && $('.sticky').css("background","transparent")
   if (window.innerWidth > 1024) {
-    open = false;
     $('.menu-list').css({
       display: 'flex',
       position: 'static',
       background: 'transparent',
     });
   } else {
-    $('.menu-list').css({
-      display: 'none',
+    $('.menu-list').hide({
+      height: '0',
     });
   }
 };
 
 $(function() {
   $(window).scroll(function() {
+ 
     var sticky = $('.sticky'),
       scroll = $(window).scrollTop();
-
+      
     if (scroll >= 100) {
+     window.scrollY < 10 ? sticky.css("background","transparent") : sticky.css("background","rgb(117, 25, 176)")
       $('.hero').css({
         marginTop: '-30px',
       });
@@ -66,6 +67,7 @@ $(function() {
       $('.hero').css({
         marginTop: '0px',
       });
+      !open && sticky.css("background","transparent")
       sticky.removeClass('fixed');
     }
   });

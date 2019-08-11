@@ -136,7 +136,7 @@ files.forEach(file => {
       template: file,
       favicon: path.resolve(__dirname, './src/public/icon.ico'),
       minify: false,
-      // minify: !IS_DEV
+      // minify: !IS_DEV,
     })
   );
 });

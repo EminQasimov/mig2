@@ -15,7 +15,7 @@
   width: 100%;
   z-index: 999;
   background: #9783a3 url(../public/images/bg.jpg) center / cover no-repeat;
-  // background-attachment: fixed !important; // i need 100% bg images not half screen
+  // background-attachment: fixed !important; // i need 100% bg images not half screen pls full screen size images need
   // background-position: center 60vh !important;
   // background-size: 100% 50%;
 
@@ -94,6 +94,7 @@
   position: absolute;
   right: 30px;
   top: 30px;
+  z-index: 999;
   @media (max-width: 500px) {
     a {
       font-size: 0px !important;
@@ -148,8 +149,8 @@
   justify-content: center;
 }
 .menu-list {
-  @media (max-width:999px) {
-    box-shadow:0 3px 14px rgba(54, 31, 69, 0.58);
+  @media (max-width: 999px) {
+    // box-shadow:0 3px 14px rgba(54, 31, 69, 0.58);
     transition: animation 0.2s;
     animation: show2 0.3s ease;
     z-index: 999;
@@ -159,7 +160,7 @@
 menu {
   background: #f1f1f1;
   z-index: 9999;
-  box-shadow: 0 0px 1px rgba(0, 0, 0, 0.2);
+  // box-shadow: 0 0px 1px rgba(0, 0, 0, 0.2);
   // border-bottom: 1px solid #c6c6c6;
   nav {
     padding: 0 !important;
@@ -214,11 +215,19 @@ menu {
 .menu-icon {
   display: none;
 }
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
   nav ul.menu-list {
     display: none;
+    overflow: hidden;
+    position: absolute;
+    background: #7519b0;
+    left: 0;
+    top: 77px;
+    width: 100%;
+
     li {
-      padding: 8px;
+      padding: 20px;
+      text-align: center;
     }
   }
   .menu-icon {
@@ -228,7 +237,10 @@ menu {
     transition: all 0.3s;
     margin-left: auto;
     margin-right: 140px;
-    padding: 4px;
+    padding: 4px 8px;
+    border: 1px solid #c8a4e0;
+    border-radius: 4px;
+    transform: scale(0.9);
     &:hover {
       opacity: 0.8;
     }
@@ -238,7 +250,7 @@ menu {
 @media (max-width: 500px) {
   nav ul.menu-list {
     right: 16px !important;
-    top: 39px !important;
+    top: 77px !important;
   }
   .menu-icon {
     margin-right: 40px;
@@ -268,7 +280,7 @@ menu {
     opacity: 0;
   }
   to {
-    height: 192px;
+    height: 312px;
     opacity: 1;
   }
 }
