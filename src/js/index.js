@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import 'bootstrap';
-import '../scss/welcome.scss';
+import '../scss/welcome.scss'; 
 
 import './todo';
 import './azerbaijanis';
@@ -9,7 +9,11 @@ import './location';
 import './culinary';
 import './music';
 import './festivals';
-import './transportation';
+import './transportation'; 
+
+import './daimi'; 
+
+
 import WOW from 'wow.js';
 
 var wow = new WOW({ offset: 0 });

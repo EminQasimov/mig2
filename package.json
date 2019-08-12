@@ -1,9 +1,9 @@
 {
   "name": "migration",
-  "homepage": "https://github.com/EminQasimov/mig.git",
+  "homepage": "https://github.com/EminQasimov/mig2.git",
   "repository": {
     "type": "git",
-    "url": "https://github.com/EminQasimov/mig/tree/gh-pages"
+    "url": "https://github.com/EminQasimov/mig2/tree/gh-pages"
   },
   "scripts": {
     "build": "webpack -p --progress --mode production --config webpack.config.js",
