@@ -12,7 +12,7 @@ import './festivals';
 import './transportation'; 
 
 import './daimi'; 
-
+import "./qeydiyyat";
 
 import WOW from 'wow.js';
 

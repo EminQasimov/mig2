@@ -208,10 +208,10 @@ $half: $size - $size/4.8;
       transform: skew(#{- (90 - 360 / $n)}deg)
         rotate(#{-$i * 360 / $n + 8}deg); //reset parent transform
     }
-    .span2 {
-      transform: rotate(#{$i * 360 / $n - 8}deg)
-        translate(#{-94 + $i}px, #{46 - $i}px);
-    }
+    // .span2 {
+    //   transform: rotate(#{$i * 360 / $n - 8}deg)
+    //     translate(#{-94 + $i}px, #{46 - $i}px);
+    // }
     &:hover ~ .middle {
       transform: scale(0.46) translateZ(10px) rotate(#{$i * 360 / $n - 80}deg);
     }
