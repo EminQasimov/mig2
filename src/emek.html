@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, user-scalable=no"
     />
-    <title>Olduğu yer üzrə qeydiyyat</title>
+    <title>Əmək fəaliyyəti</title>
 
     <link
       href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap"
@@ -14,7 +14,7 @@
     />
   </head>
 
-  <body class="qeydiyyat">
+  <body class="emek">
     <div class="hero" id="up">
       <div class="wrapper">
         <nav class="sticky">
@@ -34,7 +34,8 @@
             <a href="#"><img src="public/images/ru.svg" />Русский</a>
           </div>
         </nav>
-        <h1>Olduğu yer üzrə qeydiyyat</h1>
+
+        <h1>Əmək fəaliyyəti</h1>
       </div>
     </div>
     <menu>
@@ -53,25 +54,27 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-              <li class="nav-item active">
+              <li class="nav-item">
                 <a class="nav-link" href="/">Visa</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link activeLink" href="qeydiyyat.html"
+                <a class="nav-link" href="qeydiyyat.html"
                   >Olduğu yer üzrə qeydiyyat</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="olma.html">Müvəqqəti olma </a>
+                <a class="nav-link " href="olma.html">Müvəqqəti olma </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="yasama.html">Müvəqqəti yaşama </a>
+                <a class="nav-link " href="yasama.html">Müvəqqəti yaşama </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="daimi.html">Daimi yaşama</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="emek.html">Əmək fəaliyyəti</a>
+                <a class="nav-link activeLink" href="emek.html"
+                  >Əmək fəaliyyəti</a
+                >
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="vetendasliq.html">Vətəndaşlıq</a>
@@ -86,66 +89,70 @@
     </menu>
 
     <section>
-      <div class="wrapper">
-        <div class="qeyd clearfix">
-          <div class="qeyd-item">
-            <div class="out" data-toggle="modal" data-target="#festivalModal">
-              <div class="in">
-                <div class="in-img"></div>
-                <div class="in-text">
-                  Viza<br />
-                  əldə et
-                </div>
-                <div class="num"><span>1</span></div>
-              </div>
+      <div class="wrapper" data-toggle="modal" data-target="#emekModal">
+        <div class="emek-container clearfix">
+          <div class="emek-item emek1">
+            <span class="over"></span>
+            <div class="emek-icon">
+              <img src="public/images/emek-icon1.png" alt="" />
             </div>
+            <h2>
+              Kimlər<br />
+              Azərbaycanda<br />
+              işləyə bilər?
+            </h2>
           </div>
-          <div class="qeyd-item">
-            <div class="out" data-toggle="modal" data-target="#festivalModal">
-              <div class="in in2">
-                <div class="in-img"></div>
-                <div class="in-text">
-                  Azərbaycana<br />
-                  səfər et
-                </div>
-                <div class="num"><span>2</span></div>
-              </div>
+          <div class="emek-item emek2">
+            <span class="over"></span>
+            <div class="emek-icon">
+              <img src="public/images/emek-icon1.png" alt="" />
             </div>
+            <h2>
+              İş icazəsini<br />
+              necə əldə<br />
+              etmək olar?
+            </h2>
           </div>
-          <div class="qeyd-item">
-            <div class="out" data-toggle="modal" data-target="#festivalModal">
-              <div class="in in3">
-                <div class="in-img"></div>
-                <div class="in-text">Zəruri<br />sənədləri<br />topla</div>
-                <div class="num"><span>3</span></div>
-              </div>
+          <div class="emek-item emek3">
+            <span class="over"></span>
+            <div class="emek-icon">
+              <img src="public/images/emek-icon1.png" alt="" />
             </div>
+            <h2>
+              İş icazəsinin <br />alınması tələb<br />
+              olunmayan şəxslər
+            </h2>
           </div>
-          <div class="qeyd-item">
-            <div class="out" data-toggle="modal" data-target="#festivalModal">
-              <div class="in in4">
-                <div class="in-img"></div>
-                <div class="in-text">
-                  Qeydiyyat<br />
-                  üçün<br />
-                  müraciət et
-                </div>
-                <div class="num"><span>4</span></div>
-              </div>
+          <div class="emek-item emek4">
+            <span class="over"></span>
+            <div class="emek-icon">
+              <img src="public/images/emek-icon1.png" alt="" />
             </div>
+            <h2>İcazənin <br />etibarlılıq müddəti</h2>
           </div>
-          <div class="qeyd-item">
-            <div class="out" data-toggle="modal" data-target="#festivalModal">
-              <div class="in in5">
-                <div class="in-img"></div>
-                <div class="in-text">
-                  Ölkədə<br />
-                  olma müddətindən<br />
-                  zövq al
-                </div>
-                <div class="num"><span>5</span></div>
-              </div>
+          <div class="emek-item emek5">
+            <span class="over"></span>
+            <div class="emek-icon">
+              <img src="public/images/emek-icon1.png" alt="" />
             </div>
+            <h2>
+              90 gündən çox <br />olmayan müddətə <br />
+              iş icazəsi almadan<br />
+              həyata keçirilə bilən<br />
+              fəaliyyət sahələri
+            </h2>
+          </div>
+          <div class="emek-item emek6 activeEmek">
+            <span class="over"></span>
+            <div class="emek-icon">
+              <img src="public/images/emek-icon1.png" alt="" />
+            </div>
+            <h2>
+              Dövlət rüsumu
+            </h2>
+          </div>
+          <div class="round">
+            <span></span>
           </div>
         </div>
       </div>
@@ -154,7 +161,7 @@
     <!-- Modal -->
     <div
       class="modal fade"
-      id="festivalModal"
+      id="emekModal"
       tabindex="-1"
       role="dialog"
       aria-labelledby="exampleModalCenterTitle"

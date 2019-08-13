@@ -11,8 +11,13 @@ import './music';
 import './festivals';
 import './transportation'; 
 
-import './daimi'; 
 import "./qeydiyyat";
+import "./olma";
+import "./yasama";
+import './daimi'; 
+import './emek'; 
+import "./vetendasliq";
+import "./siginacaq";
 
 import WOW from 'wow.js';
 

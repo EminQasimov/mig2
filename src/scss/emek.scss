@@ -1,0 +1,198 @@
+.emek {
+  padding: 0 !important;
+  .hero {
+    background: #9783a3 url(../public/images/emekbg.jpg) center top / cover
+      fixed no-repeat;
+  }
+
+  .emek-container {
+    width: 84%;
+    margin: 100px auto;
+    position: relative;
+  }
+  .over {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    transition: all 0.3s;
+    background: rgba(130, 2, 162, 0.5);
+  }
+
+  .emek-item {
+    width: 49%;
+    float: left;
+    height: 200px;
+    margin: 0.5%;
+    background: #000;
+    overflow: hidden;
+    position: relative;
+    &:nth-of-type(2n) {
+      .emek-icon {
+        left: auto;
+        right: 0;
+        margin-left: auto;
+        margin-right: 37px;
+      }
+      h2 {
+        left: 60%;
+      }
+    }
+    &:hover {
+      cursor: pointer;
+      .over {
+        background: rgba(243, 73, 5, 0.5);
+      }
+    }
+    &::after {
+      content: " ";
+      position: absolute;
+      z-index: 9;
+      left: 0;
+      top: 0;
+      display: inline-block;
+      width: 100px;
+      height: 100%;
+      border: 100px solid transparent;
+      border-top-color: #fff;
+      border-bottom-color: #fff;
+      transform: translateX(-50%);
+    }
+    &::before {
+      content: " ";
+      position: absolute;
+      z-index: 9;
+      right: 0;
+      top: 0;
+      display: inline-block;
+      width: 100px;
+      height: 100%;
+      border: 100px solid transparent;
+      border-top-color: #fff;
+      border-bottom-color: #fff;
+      transform: translateX(50%);
+    }
+    h2 {
+      color: #fff;
+      position: absolute;
+      z-index: 99;
+      width: 50%;
+      top: 50%;
+      left: 44%;
+      text-align: center;
+      font-size: 20px;
+      transform: translate(-50%, -50%);
+    }
+    .emek-icon {
+      width: 110px;
+      height: 110px;
+      position: absolute;
+      background: #fff;
+      z-index: 99;
+      top: 50%;
+      left: 0%;
+      transform: translate(0%, -50%) rotate(45deg);
+      margin-left: 37px;
+      text-align: center;
+      img {
+        transform: rotate(-45deg);
+        max-width: 55%;
+        margin-top: 22px;
+      }
+    }
+  }
+
+  .emek1 {
+    background: url(../public/images/emek1.jpg) center / cover;
+    &:hover ~ .round span {
+      transform: rotate(0deg) !important;
+    }
+  }
+
+  .emek2 {
+    background: url(../public/images/emek2.jpg) center / cover;
+    &:hover ~ .round span {
+      transform: rotate(90deg) !important;
+    }
+  }
+
+  .emek3 {
+    background: url(../public/images/emek3.jpg) center / cover;
+    &:hover ~ .round span {
+      transform: rotate(-45deg) !important;
+    }
+  }
+
+  .emek4 {
+    background: url(../public/images/emek4.jpg) center / cover;
+    &:hover ~ .round span {
+      transform: rotate(135deg) !important;
+    }
+  }
+  .emek5 {
+    background: url(../public/images/emek5.jpg) center / cover;
+    &:hover ~ .round span {
+      transform: rotate(-90deg) !important;
+    }
+  }
+  .emek6 {
+    background: url(../public/images/emek6.jpg) center / cover;
+    &:hover ~ .round span {
+      transform: rotate(180deg) !important;
+    }
+  }
+
+  .emek1.activeEmek ~ .round span {
+    transform: rotate(0deg);
+  }
+  .emek2.activeEmek ~ .round span {
+    transform: rotate(90deg);
+  }
+  .emek3.activeEmek ~ .round span {
+    transform: rotate(-45deg);
+  }
+  .emek4.activeEmek ~ .round span {
+    transform: rotate(135deg);
+  }
+  .emek5.activeEmek ~ .round span {
+    transform: rotate(-90deg);
+  }
+  .emek6.activeEmek ~ .round span {
+    transform: rotate(180deg);
+  }
+
+  .round {
+    width: 38%;
+    border: 6px solid #fff;
+    position: absolute;
+    border-radius: 999px;
+    z-index: 9;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: url(../public/images/emek7.jpg) center / cover;
+    padding: 16px;
+    span {
+      width: 100%;
+      transition: all 0.3s;
+      height: 100%;
+      display: block;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.2);
+      border: 8px solid #8202a2;
+      &::after {
+        content: " ";
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-bottom: 50px solid #8202a2;
+        transform: rotate(-46deg) translate(-28%, 20%);
+      }
+    }
+  }
+} // end
