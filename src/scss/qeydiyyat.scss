@@ -71,6 +71,8 @@
     width: 20%;
     display: inline-block;
     text-align: center;
+    transform: translateZ(2px);
+    backface-visibility: hidden;
     @media (max-width: 1250px) {
       width: 30%;
     }
@@ -101,7 +103,6 @@
     display: inline-block;
     transform: rotate(45deg);
     background: #7519b0;
-    // background-clip: content-box;
     position: relative;
     padding: 8px;
     overflow: hidden;

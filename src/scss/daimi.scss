@@ -125,6 +125,8 @@ $half: $size - $size/4.8;
       border: 60px solid transparent;
       border-bottom: 60px solid #fff;
       position: absolute;
+      opacity: 0;
+      transition: all 0.4s;
       top: -126px;
       left: 242px;
     }
@@ -302,5 +304,8 @@ $half: $size - $size/4.8;
   }
   .img2 {
     display: inline-block !important;
+  }
+  & ~ .middle::after {
+    opacity: 1;
   }
 }
