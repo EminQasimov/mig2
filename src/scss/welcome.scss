@@ -1,245 +1,274 @@
 @import "../scss/common/index.scss";
 @import "../scss/common/header.scss";
 @import "../scss/common/footer.scss";
-
-$n: 9;
-$size: 640px;
-$half: $size - $size/4.8;
-
-.visa .container {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  margin: 64px auto;
-  @media (min-width: 576px) {
-    max-width: 100%;
-  }
-}
-.cont {
-  min-width: $size;
-  min-height: $size;
-  width: $size;
-  height: $size;
+.visa {
+  overflow-x: hidden;
   position: relative;
-  border-radius: 50%;
-  overflow: hidden;
-  display: inline-block;
-  transform: rotate(-1deg);
-  // box-shadow: 0 0 14px #000;
-  @media (max-width: 800px) {
-    transform: rotate(-1deg) scale(0.8);
-    transform-origin: center;
-  }
-  @media (max-width: 600px) {
-    transform: rotate(-1deg) scale(0.66);
+  padding: 0 !important;
+  .hero {
+    background-image: url(../public/images/visabg.jpg);
   }
 
-  @media (max-width: 450px) {
-    transform: rotate(-1deg) scale(0.45);
-  }
-  .middle {
-    position: absolute;
-    width: 98%;
-    height: 98%;
-    left: 1%;
-    top: 1%;
-    transform: scale(0.46) translateZ(10px);
-    // transition: all 0.2s linear;
-    z-index: 999;
-    background: transparent;
+  &::after {
+    content: " ";
     display: block;
-    border-radius: 50%;
-    box-sizing: border-box;
-    border: 22px solid #fff;
-    padding: 80px;
-    background-clip: content-box;
-    pointer-events: none;
-    filter: drop-shadow(0 0 64px rgba(63, 19, 2, 0.76));
-    // box-shadow:0 0 220px #111;
-    &::after {
-      content: " ";
-      display: block;
-      width: 20px;
-      height: 20px;
-      border: 60px solid transparent;
-      border-bottom: 60px solid #fff;
-      position: absolute;
-      top: -126px;
-      left: 242px;
+    position: absolute;
+    bottom: 21%;
+    left: -26%;
+    z-index: -11;
+    width: 600px;
+    height: 600px;
+    transform: rotate(45deg);
+    background: rgb(241, 232, 247);
+    @media (max-width: 1250px) {
+      bottom: 31%;
+    }
+    @media (max-width: 1012px) {
+      left: -38%;
+    }
+    @media (max-width: 777px) {
+      left: -61%;
+      bottom: 37%;
+    }
+    @media (max-width: 550px) {
+      left: -114%;
     }
   }
-  .middle2 {
-    position: absolute;
-    width: 98%;
-    height: 98%;
-    left: 1%;
-    top: 1%;
-    transform: scale(0.46) translateZ(10px);
-    transition: all 0.2s linear;
-    background: transparent;
+  &::before {
+    content: " ";
     display: block;
-    border-radius: 50%;
-    box-sizing: border-box;
-    padding: 80px;
-    background: url("../public/images/orta.jpg") center / cover;
-    background-clip: content-box;
-    pointer-events: none;
-    z-index: 9999;
+    position: absolute;
+    bottom: 21%;
+    right: -8%;
+    z-index: -11;
+    width: 200px;
+    height: 200px;
+    transform: rotate(45deg);
+    background: rgb(241, 232, 247);
+    @media (max-width: 1250px) {
+      bottom: 31%;
+    }
+    @media (max-width: 1120px) {
+      right: -12%;
+    }
+    @media (max-width: 790px) {
+      right: -15%;
+      bottom: 37%;
+    }
+    @media (max-width: 550px) {
+      right: -22%;
+    }
+    @media (max-width: 450px) {
+      right: -32%;
+      bottom: 27%;
+    }
   }
-}
-
-.p {
-  position: absolute;
-  width: 50%;
-  height: 50%;
-  transform-origin: right bottom;
-  overflow: hidden;
-  transition: all 300ms;
-  background: #654e78;
-  box-shadow: inset 4px -7px 6px 0px rgba(37, 27, 45, 0.42);
-  &:hover {
-    cursor: pointer;
-    background: #f34705;
-    // z-index: 999;
-    box-shadow: -8px -8px 10px 17px rgba(37, 27, 45, 0.3);
-  }
-  .span1 {
-    width: $half;
-    height: $half;
-    box-sizing: border-box;
-    transition: opacity 0.1s linear, transform 0.1s linear;
+  .visa-wrap {
+    width: 90%;
+    margin: 50px auto;
     text-align: center;
-    font-size: 15px;
-    background: transparent;
-    color: #fff;
-    user-select: none;
-    margin: -5px -47px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
-  .span2 {
-    display: inline-block;
-    width: 68px;
-    height: 74px;
-    background: #fff;
-    color: black;
-    position: absolute;
-    left: 210px;
-    top: 210px;
-    box-shadow: inset 4px -7px 7px 0px rgba(37, 27, 45, 0.3),
-      inset -4px -7px 5px 0px rgba(37, 27, 45, 0.3),
-      inset 0px 3px 4px 0px rgba(37, 27, 45, 0.3);
-    img {
-      width: 100%;
-      height: 100%;
-    }
-    .img2 {
-      display: none;
-    }
-  }
-}
-@for $i from 1 through $n {
-  .pie#{$i} {
-    transform: rotate(#{$i * 360 / $n - 8}deg) skew(#{90 - 360 / $n}deg);
-    z-index: $i;
-    .span1 {
-      transform: skew(#{- (90 - 360 / $n)}deg)
-        rotate(#{-$i * 360 / $n + 8}deg); //reset parent transform
-    }
-    .span2 {
-      transform: rotate(#{$i * 360 / $n - 8}deg)
-        translate(#{-94 + $i}px, #{46 - $i}px);
-    }
-    &:hover ~ .middle {
-      transform: scale(0.46) translateZ(10px) rotate(#{$i * 360 / $n - 80}deg);
-    }
-    &:hover span {
-      .img1 {
-        display: none;
-      }
-      .img2 {
-        display: inline-block;
-      }
-    }
-  }
-}
-
-.pie1 .span2 {
-  transform: rotate(32deg) translate(-83px, 34px);
-  img {
-    transform: scale(0.5) rotate(-33deg);
-  }
-}
-
-.pie2 .span2 {
-  transform: rotate(72deg) translate(-84px, 29px);
-  img {
-    transform: scale(0.6) rotate(-70deg);
-  }
-}
-.pie3 .span2 {
-  transform: rotate(112deg) translate(-92px, 24px);
-  img {
-    transform: scale(0.46) rotate(-113deg);
-  }
-}
-
-.pie4 .span2 {
-  transform: rotate(152deg) translate(-99px, 27px);
-  img {
-    transform: scale(0.46) rotate(-151deg);
-  }
-}
-
-.pie5 .span2 {
-  transform: rotate(192deg) translate(-103px, 31px);
-  img {
-    transform: scale(0.46) rotate(-192deg);
-  }
-}
-
-.pie6 .span2 {
-  transform: rotate(232deg) translate(-105px, 38px);
-  img {
-    transform: scale(0.46) rotate(130deg);
-  }
-}
-
-.pie7 .span2 {
-  transform: rotate(272deg) translate(-100px, 45px);
-  img {
-    transform: scale(0.46) rotate(-90deg);
-  }
-}
-
-.pie8 .span2 {
-  transform: rotate(312deg) translate(-94px, 48px);
-  img {
-    transform: scale(0.46) rotate(49deg);
-  }
-}
-
-.pie9 .span2 {
-  transform: rotate(352deg) translate(-83px, 46px);
-  img {
-    transform: scale(0.46) rotate(10deg);
-  }
-}
-
-.pie1:hover ~ .middle {
-  transform: scale(0.46) translateZ(10px) rotate(319deg);
-}
-
-.selected {
-  cursor: pointer;
-  background: #f34705;
-  z-index: 999;
-  box-shadow: -8px -8px 10px 17px rgba(37, 27, 45, 0.3);
-  .img1 {
+  .visa-desc {
     display: none;
   }
-  .img2 {
-    display: inline-block !important;
+  .activeVisa {
+    &::before {
+      background: rgba(255, 255, 255, 0.6) !important;
+    }
+    &::after {
+      transform: scale(1.1) !important;
+    }
+    h1 {
+      color: rgba(118, 25, 176, 1) !important;
+      text-shadow: 0 0 1px rgba(118, 25, 176, 1) !important;
+    }
+    img:nth-of-type(1) {
+      opacity: 0 !important;
+    }
+    img:nth-of-type(2) {
+      opacity: 1 !important;
+    }
   }
+
+  .visa-item {
+    width: 22%;
+    background: #000;
+    display: inline-block;
+    margin: 1.3%;
+    position: relative;
+    overflow: hidden;
+    @media (max-width: 1250px) {
+      h1 {
+        font-size: 22px !important;
+      }
+    }
+
+    @media (max-width: 1100px) {
+      h1 {
+        font-size: 20px !important;
+      }
+      img {
+        bottom: 10% !important;
+        transform: translateX(-50%) scale(0.85) !important;
+      }
+    }
+    @media (max-width: 1000px) {
+      width: 45%;
+      margin: 2%;
+      h1 {
+        font-size: 32px !important;
+      }
+      img {
+        bottom: 14% !important;
+        transform: translateX(-50%) !important;
+      }
+    }
+
+    @media (max-width: 700px) {
+      h1 {
+        font-size: 22px !important;
+      }
+      img {
+        bottom: 11% !important;
+        transform: translateX(-50%) scale(0.8) !important;
+      }
+    }
+
+    @media (max-width: 500px) {
+      width: 100%;
+      margin: 0;
+      margin-bottom: 20px;
+      h1 {
+        font-size: 32px !important;
+      }
+      img {
+        bottom: 14% !important;
+        transform: translateX(-50%) !important;
+      }
+    }
+
+    h1 {
+      color: #fff;
+      font-size: 32px;
+      font-weight: 500;
+      position: absolute;
+      text-align: center;
+      width: 100%;
+      left: 50%;
+      top: 30%;
+      transform: translateX(-50%);
+      z-index: 88;
+      padding: 10px;
+      transition: all 0.3s;
+    }
+
+    img {
+      margin-top: 20px;
+      width: 60px;
+      position: absolute;
+      z-index: 88;
+      left: 50%;
+      bottom: 14%;
+      transform: translateX(-50%);
+      transition: all 0.3s;
+      &:nth-of-type(1) {
+        opacity: 1;
+      }
+      &:nth-of-type(2) {
+        opacity: 0;
+      }
+    }
+
+    &::after {
+      content: " ";
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: absolute;
+      transition: all 0.3s;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      background: url(../public/images/visa1.jpg) center / cover;
+    }
+    &:nth-child(2n) {
+      &::before {
+        background: rgba(254, 68, 1, 0.5);
+      }
+    }
+
+    &:nth-child(2) {
+      &::after {
+        background: url(../public/images/visa2.jpg) center / cover;
+      }
+    }
+
+    &:nth-child(3) {
+      &::after {
+        background: url(../public/images/visa3.jpg) center / cover;
+      }
+    }
+
+    &:nth-child(4) {
+      &::after {
+        background: url(../public/images/visa4.jpg) center / cover;
+      }
+    }
+
+    &:nth-child(5) {
+      &::after {
+        background: url(../public/images/visa5.jpg) center / cover;
+      }
+    }
+
+    &:nth-child(6) {
+      &::after {
+        background: url(../public/images/visa6.jpg) center / cover;
+      }
+    }
+
+    &:nth-child(7) {
+      &::after {
+        background: url(../public/images/visa7.jpg) center / cover;
+      }
+    }
+
+    &:nth-child(8) {
+      &::after {
+        background: url(../public/images/visa8.jpg) center / cover;
+      }
+    }
+
+    &::before {
+      content: " ";
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      transition: all 0.3s;
+      background: rgba(118, 25, 176, 0.5);
+    }
+    &:hover {
+      cursor: pointer;
+      &::before {
+        background: rgba(255, 255, 255, 0.6);
+      }
+      &::after {
+        transform: scale(1.1);
+      }
+      h1 {
+        color: rgba(118, 25, 176, 1);
+        text-shadow: 0 0 1px rgba(118, 25, 176, 1);
+      }
+      img:nth-of-type(1) {
+        opacity: 0;
+      }
+      img:nth-of-type(2) {
+        opacity: 1;
+      }
+    }
+  } // visa end
 }

@@ -1,18 +1,12 @@
- 
 !!!!!! bootstrap - min.css , jquery, popper.js import olunur , html-de onlara link vermeye ehtiyac yoxdur.
-butun 9 html pagein css-i  77kb + bootstrap.min.css olan bir faylda birlesib /dist/css/0.css   
-
 
 sekillerin hamisi yoxdur
 dil elave edilmeyib.
 musiqiler tam, original deyil - big.az seslenir...
 hansi font sualdadir ?
-optimize background big images, use webp format
-
-
-
 
 ## Development
+
 Run development page on **localhost:8080**
 
 ```
@@ -20,6 +14,7 @@ $ npm run dev
 ```
 
 ## Build
+
 Build for production.
 
 ```
@@ -27,6 +22,7 @@ $ npm run build
 ```
 
 ## Deploy
+
 Deploy to `gh-pages` branch on GitHub.
 change git url in package.json
 
@@ -34,11 +30,10 @@ change git url in package.json
 $ npm run deploy
 ```
 
-
 # Boostrap + Webpack + JQuery Boilerplate
 
 > Build landing page with **Boostrap** and **jQuery** is so easy.
- 
+
 ## Why ?
 
 React is awesome, and I use it everyday.
@@ -82,7 +77,6 @@ $ git clone https://github.com/xxhomey19/bootstrap-webpack-jquery-boilerplate.gi
 $ cd bootstrap-webpack-jquery-boilerplate
 $ yarn // or npm install
 ```
-
 
 ## License
 
