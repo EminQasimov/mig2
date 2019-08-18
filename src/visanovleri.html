@@ -6,14 +6,14 @@
       name="viewport"
       content="width=device-width, initial-scale=1, user-scalable=no"
     />
-    <title>Visa</title>
+    <title>Visa növləri</title>
     <link
       href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap"
       rel="stylesheet"
     />
   </head>
 
-  <body class="visa-index">
+  <body class="visa-novleri">
     <div class="hero" id="up">
       <div class="wrapper">
         <nav class="sticky">
@@ -87,27 +87,70 @@
     <section>
       <div class="wrapper">
         <div class="row index-wrap">
-          <div class=" col-sm-12 col-md-6">
-            <div class="index-item">
-              <a href="visanovleri.html">
-                <div class="index-img"></div>
-                <span></span>
-                <h2>
-                  VİZA KATEQORİYALARI
-                </h2>
-              </a>
+          <div class="col">
+            <div class="index-item left-item left1">
+              <div class="index-img"></div>
+              <h2>Giriş vizası</h2>
+              <span></span>
             </div>
           </div>
-          <div class="col-sm-12 col-md-6">
-            <div class="index-item right-item">
-              <a href="#">
-                <div class="index-img"></div>
-                <span></span>
-                <h2>
-                  NECƏ MÜRACİƏT ETMƏLİ?
-                </h2>
-              </a>
+
+          <div class="col">
+            <div
+              class="index-item right-item right1"
+              data-toggle="modal"
+              data-target="#visaNovleri2"
+            >
+              <div class="index-img"></div>
+              <h2>Tranzit vizası</h2>
+              <span></span>
             </div>
+          </div>
+        </div>
+
+        <div class="left">
+          <div class="row index-wrap-menu">
+            <div class="col">
+              <div class="index-item">
+                <h2 data-toggle="modal" data-target="#visaNovleri">
+                  Visa növləri
+                </h2>
+              </div>
+            </div>
+            <div class="col">
+              <div class="index-item right-item">
+                <a href="visa.html"> <h2>Visa kateqoriyaları</h2></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="right">
+          <div class="row index-wrap-menu right-menu">
+            <div class="col-sm-12 col-md-6">
+              <div class="index-item">
+                <h2> </h2>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+              <div class="index-item right-item">
+                <h2> </h2>
+              </div>
+            </div>
+          </div>
+        </div> -->
+
+        <div class="row note">
+          <div class="col-sm-12">
+            <p>
+              Qeyd: Azərbaycan Respublikasının razılığı olmadan beynəlxalq
+              səviyyədə Azərbaycanın tərkib hissəsi kimi tanınan və Ermənistan
+              Respublikasının Silahlı Qüvvələri tərəfindən işğal olunan
+              ərazilərə (Dağlıq Qarabağ və ətraf əraziləri) qanunsuz səfər
+              edərək ölkə qanunvericiliyinin tələblərini pozmuş xarici ölkə
+              vətəndaşları Azərbaycan Respublikası tərəfindən “arzuolunmaz
+              şəxslər” siyahısına daxil edilir və ölkə ərazisinə buraxılmırlar!
+            </p>
           </div>
         </div>
       </div>
@@ -116,7 +159,7 @@
     <!-- Modal -->
     <div
       class="modal fade"
-      id="visaModal"
+      id="visaNovleri"
       tabindex="-1"
       role="dialog"
       aria-labelledby="exampleModalCenterTitle"
@@ -129,8 +172,55 @@
         <div class="modal-content">
           <div class="modal-body">
             <div class="modal-text">
-              <h5 class="modal-title"></h5>
-              <div class="modal-desc"></div>
+              <h5 class="modal-title">Viza növləri</h5>
+              <div class="modal-desc">
+                <p>Birdəfəlik giriş vizası 90 günədək müddətə verilir.</p>
+                <p>Çoxdəfəlik giriş vizası 2 ilədək müddətə verilir.</p>
+                <a class="link" href="">Necə müraciət etməli?</a>
+              </div>
+            </div>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="visaNovleri2"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog  modal-dialog-centered  modal-xl"
+        role="document"
+      >
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="modal-text">
+              <h5 class="modal-title">Tranzit vizası</h5>
+              <div class="modal-desc">
+                <p>
+                  Birdəfəlik və ikidəfəlik tranzit vizaları üçüncü ölkələrə
+                  gedən əcnəbilərə və vətəndaşlığı olmayan şəxslərə Azərbaycan
+                  Respublikasının ərazisindən keçmək üçün verilir.
+                </p>
+                <p>
+                  Tranzit vizasının etibarlılıq müddəti 30 günədək, ölkədə qalma
+                  müddəti isə 5 günədək müəyyən edilir.
+                </p>
+                <a class="link" href="">Necə müraciət etməli?</a>
+              </div>
             </div>
             <button
               type="button"

@@ -5,10 +5,10 @@ $(function() {
   var width = v.width();
   v.height(width);
 
-  window.onresize = function() {
+  window.addEventListener('resize', function() {
     var width = v.width();
     v.height(width + 10);
-  };
+  });
 
   $('.veten-item').click(function() {
     var self = this;

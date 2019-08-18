@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import 'bootstrap';
-import '../scss/welcome.scss'; 
+import '../scss/index.scss'; 
 
 import "./qeydiyyat";
 import "./olma";
@@ -9,6 +9,10 @@ import './daimi';
 import './emek'; 
 import "./vetendasliq";
 import "./siginacaq";
+
+import "./visakateqoriyalar"
+import "./visanovleri"
+import "./apply"
 
 import WOW from 'wow.js';
 
@@ -74,40 +78,6 @@ $(function() {
 });
 
 
-
-$(function() {
-  var v = $('.visa-item');
-  var width = v.width();
-  v.height(width);
-
-  window.onresize = function() {
-    var width = v.width();
-    v.height(width + 10);
-  };
-
-  $('.visa-item').click(function() {
-    $('.visa-item').each(function() {
-      $(this).removeClass('activeVisa');
-    });
-
-    $(this).addClass('activeVisa');
-  });
-
-  
-  $('#visaModal').on('show.bs.modal', function(event) {
-    var target = $(event.relatedTarget);
-    var t = target.find('h1')[0];
-    var d = target.find('.visa-desc')[0];
-
-    var title = t && t.innerText;
-    var desc = d && d.innerHTML;
-    var modal = $(this);
-
-    modal.find('.modal-title').text(title);
-    modal.find('.modal-desc').html(desc);
-  });
-
-});
 
 
 
