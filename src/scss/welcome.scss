@@ -271,4 +271,30 @@
       }
     }
   } // visa end
+  .link {
+    padding: 10px 14px;
+    background: #7619b0;
+    color: #fff;
+    height: 40px;
+    position: relative;
+    float: right;
+    text-transform: uppercase;
+
+    @media (max-width: 500px) {
+      font-size: 14px;
+    }
+
+    &::after {
+      content: " ";
+      width: 20px;
+      height: 100%;
+      display: block;
+      border: 20px solid transparent;
+      border-left-color: #7619b0;
+      position: absolute;
+      right: 0;
+      transform: translateX(100%);
+      top: 0;
+    }
+  }
 }

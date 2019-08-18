@@ -25,6 +25,20 @@ const config = {
         exclude: /node_modules/,
         loader: 'babel-loader',
       },
+      // {
+      //   test: /\.scss$/,
+      //   use: [
+      //     {
+      //       loader: MiniCssExtractPlugin.loader,
+      //       options: {
+      //         hmr: IS_DEV,
+      //       },
+      //     },
+      //     'css-loader',
+      //     'sass-loader',
+      //   ],
+      // },
+
       {
         test: /\.scss$/,
         use: [
@@ -34,8 +48,22 @@ const config = {
               hmr: IS_DEV,
             },
           },
-          'css-loader',
-          'sass-loader',
+          {
+            loader: 'css-loader',
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              sourceMap: true,
+              config: {
+                path: 'postcss.config.js',
+              },
+            },
+          },
+          {
+            loader: 'sass-loader',
+            options: { sourceMap: true },
+          },
         ],
       },
 

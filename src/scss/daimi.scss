@@ -15,6 +15,9 @@ $half: $size - $size/4.8;
     display: flex;
     justify-content: center;
     margin: 64px auto;
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+    mask-image: -webkit-radial-gradient(white, black);
+    perspective: 1000px;
     @media (min-width: 576px) {
       max-width: 100%;
     }
@@ -86,6 +89,9 @@ $half: $size - $size/4.8;
   overflow: hidden;
   display: inline-block;
   transform: rotate(-1deg);
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  mask-image: -webkit-radial-gradient(white, black);
+  perspective: 1000px;
   // box-shadow: 0 0 14px #000;
   @media (max-width: 800px) {
     transform: rotate(-1deg) scale(0.8);
@@ -160,6 +166,9 @@ $half: $size - $size/4.8;
   transition: all 300ms;
   background: #654e78;
   box-shadow: inset 4px -7px 6px 0px rgba(37, 27, 45, 0.42);
+  // -webkit-mask-image: -webkit-radial-gradient(white, black);
+  // mask-image: -webkit-radial-gradient(white, black);
+  perspective: 1000px;
   &:hover {
     cursor: pointer;
     background: #f34705;

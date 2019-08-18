@@ -10,6 +10,8 @@
     margin: 100px auto;
     position: relative;
     backface-visibility: hidden;
+    -webkit-perspective: 600px; // remove unwanted oulines
+    perspective: 600px; // remove unwanted oulines
     @media (max-width: 1300px) {
       transform: translateX(-50%) scale(0.9);
       left: 50%;
@@ -62,7 +64,7 @@
       margin: 0;
     }
     @media (max-width: 470px) {
-      transform: scale(0.9);
+      transform: perspective(500px) scale(0.9);
       & .emek-icon {
         transform: translate(0%, -50%) rotate(45deg) scale(0.6) !important;
         margin-left: 6px !important;

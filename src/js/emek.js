@@ -5,10 +5,11 @@ $(function() {
   var width = round.width();
   round.height(width);
 
-  window.onresize = function() {
+  window.addEventListener('resize', function() {
     var width = round.width();
     round.height(width);
-  };
+  });
+
   $('.emek-item').click(function() {
     $('.emek-item').each(function() {
       $(this).removeClass('activeEmek');

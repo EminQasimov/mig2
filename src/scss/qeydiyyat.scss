@@ -101,7 +101,7 @@
   .out {
     width: 70%;
     display: inline-block;
-    transform: rotate(45deg);
+    transform: perspective(1000px) rotate(45deg);
     background: #7519b0;
     position: relative;
     padding: 8px;
