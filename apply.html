@@ -6,15 +6,14 @@
       name="viewport"
       content="width=device-width, initial-scale=1, user-scalable=no"
     />
-    <title>Olduğu yer üzrə qeydiyyat</title>
-
+    <title>Necə müraciət etməli?</title>
     <link
       href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap"
       rel="stylesheet"
     />
   <link rel="shortcut icon" href="icon.ico"><link href="css/0.css" rel="stylesheet"><link as="style" href="css/0.css" rel="preload"><link as="script" href="js/main.a2d26a721e6d81c06570.js" rel="preload"><link as="script" href="js/runtime.a2d26a721e6d81c06570.js" rel="preload"><link as="script" href="js/vendor.a2d26a721e6d81c06570.js" rel="preload"></head>
 
-  <body class="qeydiyyat">
+  <body class="apply">
     <div class="hero" id="up">
       <div class="wrapper">
         <nav class="sticky">
@@ -34,7 +33,7 @@
             <a href="#"><img src="public/images/ru.svg" />Русский</a>
           </div>
         </nav>
-        <h1>Olduğu yer üzrə qeydiyyat</h1>
+        <h1>Visa</h1>
       </div>
     </div>
     <menu>
@@ -54,10 +53,10 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item active">
-                <a class="nav-link" href="/">Visa</a>
+                <a class="nav-link activeLink" href="/">Visa</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link activeLink" href="qeydiyyat.html"
+                <a class="nav-link " href="qeydiyyat.html"
                   >Olduğu yer üzrə qeydiyyat</a
                 >
               </li>
@@ -87,65 +86,37 @@
 
     <section>
       <div class="wrapper">
-        <div class="qeyd clearfix">
-          <div class="qeyd-item">
-            <div class="out" data-toggle="modal" data-target="#qeydModal1">
-              <div class="in">
-                <div class="in-img"></div>
-                <div class="in-text">
-                  Viza<br />
-                  əldə et
-                </div>
-                <div class="num"><span>1</span></div>
-              </div>
-            </div>
+        <div class="apply-wrap">
+          <div class="apply-item" data-toggle="modal" data-target="#apply1">
+            <div class="apply-img"></div>
+            <h3>
+              Vİza tələb <br />
+              olunmayan ölkələr
+            </h3>
           </div>
-          <div class="qeyd-item">
-            <div class="out" data-toggle="modal" data-target="#qeydModal2">
-              <div class="in in2">
-                <div class="in-img"></div>
-                <div class="in-text">
-                  Azərbaycana<br />
-                  səfər et
-                </div>
-                <div class="num"><span>2</span></div>
-              </div>
-            </div>
+
+          <div class="apply-item" data-toggle="modal" data-target="#apply2">
+            <div class="apply-img"></div>
+            <h3>
+              Hava lİmanInda <br />
+              vİza
+            </h3>
           </div>
-          <div class="qeyd-item">
-            <div class="out" data-toggle="modal" data-target="#qeydModal3">
-              <div class="in in3">
-                <div class="in-img"></div>
-                <div class="in-text">Zəruri<br />sənədləri<br />topla</div>
-                <div class="num"><span>3</span></div>
-              </div>
-            </div>
+
+          <div class="apply-item" data-toggle="modal" data-target="#apply3">
+            <div class="apply-img"></div>
+            <h3>
+              ASAN <br />
+              vİza
+            </h3>
           </div>
-          <div class="qeyd-item">
-            <div class="out" data-toggle="modal" data-target="#qeydModal4">
-              <div class="in in4">
-                <div class="in-img"></div>
-                <div class="in-text">
-                  Qeydiyyat<br />
-                  üçün<br />
-                  müraciət et
-                </div>
-                <div class="num"><span>4</span></div>
-              </div>
-            </div>
-          </div>
-          <div class="qeyd-item">
-            <div class="out" data-toggle="modal" data-target="#qeydModal5">
-              <div class="in in5">
-                <div class="in-img"></div>
-                <div class="in-text">
-                  Ölkədə<br />
-                  olma müddətindən<br />
-                  zövq al
-                </div>
-                <div class="num"><span>5</span></div>
-              </div>
-            </div>
+
+          <div class="apply-item" data-toggle="modal" data-target="#apply4">
+            <div class="apply-img"></div>
+            <h3>
+              Dİplomatİk <br />
+              nümayənDəlİklər
+            </h3>
           </div>
         </div>
       </div>
@@ -154,7 +125,7 @@
     <!-- Modal -->
     <div
       class="modal fade"
-      id="qeydModal1"
+      id="apply1"
       tabindex="-1"
       role="dialog"
       aria-labelledby="exampleModalCenterTitle"
@@ -167,14 +138,13 @@
         <div class="modal-content">
           <div class="modal-body">
             <div class="modal-text">
-              <h5 class="modal-title">Visa əldə et</h5>
+              <h5 class="modal-title">Viza tələb olunmayan ölkələr</h5>
               <div class="modal-desc">
-                <ul class="qeyd-modal1">
-                  <li><a href="">Visa tələb olunmayan ölkələr</a></li>
-                  <li><a href="">Hava limanında visa</a></li>
-                  <li><a href="">ASAN visa</a></li>
-                  <li><a href="">Diplomatik nümayəndəliklər</a></li>
-                </ul>
+                <p>
+                  Bu ölkələrin vətəndaşlarına Azərbaycan Respublikası ərazisinə
+                  viza alınması tələb olunmur.(http://mfa.gov.az/content/189)
+                </p>
+                <a class="link" href="apply.html">Necə müraciət etməli?</a>
               </div>
             </div>
             <button
@@ -193,7 +163,7 @@
     <!-- Modal -->
     <div
       class="modal fade"
-      id="qeydModal2"
+      id="apply1"
       tabindex="-1"
       role="dialog"
       aria-labelledby="exampleModalCenterTitle"
@@ -206,12 +176,18 @@
         <div class="modal-content">
           <div class="modal-body">
             <div class="modal-text">
-              <h5 class="modal-title">Azərbaycana səfər et</h5>
+              <h5 class="modal-title">Tranzit vizası</h5>
               <div class="modal-desc">
-                Azərbaycan Respublikasında 15 gündən artıq müvəqqəti qalmaq
-                istəyən əcnəbilər və ya vətəndaşlığı olmayan şəxslər olduğu yer
-                üzrə qeydiyyata alınmalıdırlar. Əks təqdirdə onlara inzibati
-                cərimə tətbiq ediləcəkdir.
+                <p>
+                  Birdəfəlik və ikidəfəlik tranzit vizaları üçüncü ölkələrə
+                  gedən əcnəbilərə və vətəndaşlığı olmayan şəxslərə Azərbaycan
+                  Respublikasının ərazisindən keçmək üçün verilir.
+                </p>
+                <p>
+                  Tranzit vizasının etibarlılıq müddəti 30 günədək, ölkədə qalma
+                  müddəti isə 5 günədək müəyyən edilir.
+                </p>
+                <a class="link" href="apply.html">Necə müraciət etməli?</a>
               </div>
             </div>
             <button
@@ -230,7 +206,7 @@
     <!-- Modal -->
     <div
       class="modal fade"
-      id="qeydModal3"
+      id="apply2"
       tabindex="-1"
       role="dialog"
       aria-labelledby="exampleModalCenterTitle"
@@ -243,11 +219,15 @@
         <div class="modal-content">
           <div class="modal-body">
             <div class="modal-text">
-              <h5 class="modal-title">Sənədlərini topla</h5>
+              <h5 class="modal-title">Hava limanında viza</h5>
               <div class="modal-desc">
-                Ərizə-anket Əcnəbinin pasportunun (digər sərhədkeçmə sənədinin)
-                surəti (viza səhifəsi və ölkəyə son giriş tarixini göstərən
-                səhifələr daxil olmaqla) Dövlət rüsumu tələb olunmur!
+                <p>
+                  Bu ölkələrin vətəndaşları Azərbaycanın beynəlxalq statuslu
+                  hava limanlarında viza ala bilər.
+                  (http://mfa.gov.az/content/963)
+                </p>
+
+                <a class="link" href="apply.html">Necə müraciət etməli?</a>
               </div>
             </div>
             <button
@@ -266,7 +246,7 @@
     <!-- Modal -->
     <div
       class="modal fade"
-      id="qeydModal4"
+      id="apply3"
       tabindex="-1"
       role="dialog"
       aria-labelledby="exampleModalCenterTitle"
@@ -279,11 +259,15 @@
         <div class="modal-content">
           <div class="modal-body">
             <div class="modal-text">
-              <h5 class="modal-title">Qeydiyyat üçün müraciət et</h5>
+              <h5 class="modal-title">ASAN viza</h5>
               <div class="modal-desc">
-                Dövlət Miqrasiya Xidmətinin elektron xidmətləri vasitəsilə
-                qeydiyyat@migration.gov.az elektron ünvanı vasitəsilə ASAN
-                xidmət mərkəzləri vasitəsilə MigAz mobil tətbiqi vasitəsilə
+                <p>
+                  Bu ölkələrin vətəndaşları “ASAN Viza” sistemi vasitəsilə 3 iş
+                  günü və ya təcili hallarda 3 saat ərzində elektron viza ala
+                  bilərlər. (https://evisa.gov.az/az/countries)
+                </p>
+
+                <a class="link" href="apply.html">Necə müraciət etməli?</a>
               </div>
             </div>
             <button
@@ -302,7 +286,7 @@
     <!-- Modal -->
     <div
       class="modal fade"
-      id="qeydModal5"
+      id="apply4"
       tabindex="-1"
       role="dialog"
       aria-labelledby="exampleModalCenterTitle"
@@ -315,10 +299,15 @@
         <div class="modal-content">
           <div class="modal-body">
             <div class="modal-text">
-              <h5 class="modal-title">Ölkədə olma müddətindən zövq al</h5>
+              <h5 class="modal-title">Diplomatik nümayənfəliklər</h5>
               <div class="modal-desc">
-                Viza əsasında – vizanın etibarlılıq müddətinədək; Vizasız
-                rejimdə - 90 gün müddətinədək.
+                <p>
+                  Azərbaycan Respublikasının xarici ölkələrdəki diplomatik
+                  nümayəndəliklərinin siyahısı ilə burada tanış ola bilərsiniz.
+                  (http://mfa.gov.az/content/22)
+                </p>
+
+                <a class="link" href="apply.html">Necə müraciət etməli?</a>
               </div>
             </div>
             <button
