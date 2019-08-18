@@ -3,7 +3,12 @@
 @import "../scss/common/footer.scss";
 
 .visa-index {
+  overflow-x: hidden;
   position: relative;
+  padding: 0 !important;
+  .hero {
+    background-image: url(../public/images/visabg.jpg);
+  }
   &::after {
     content: " ";
     display: block;
