@@ -2,6 +2,7 @@
 import 'bootstrap';
 import '../scss/index.scss'; 
 
+// these are related to html files 
 import "./qeydiyyat";
 import "./olma";
 import "./yasama";
@@ -13,6 +14,7 @@ import "./siginacaq";
 import "./visakateqoriyalar"
 import "./visanovleri"
 import "./apply"
+import "./work"
 
 import WOW from 'wow.js';
 
@@ -21,41 +23,42 @@ wow.init();
 
 var open = false;
 
-$('.menu-icon').click(function() {
-  open = !open;
-  if (open) {
-    $('.menu-list').css({
-      display: 'block',
-      position: 'absolute',
-      background: '#7519b0',
-      left: '0',
-      top: '77px',
-      width: '100%',
-    });
-      $('.sticky').css("background","rgb(117, 25, 176)")
-  } else {
-    $('.menu-list').hide();
-    window.scrollY < 30 && $('.sticky').css("background","transparent")
-  }
-});
-
-window.onresize = function() {
-  open = false;
-  window.scrollY < 30 && $('.sticky').css("background","transparent")
-  if (window.innerWidth > 1024) {
-    $('.menu-list').css({
-      display: 'flex',
-      position: 'static',
-      background: 'transparent',
-    });
-  } else {
-    $('.menu-list').hide({
-      height: '0',
-    });
-  }
-};
 
 $(function() {
+  $('.menu-icon').click(function() {
+    open = !open;
+    if (open) {
+      $('.menu-list').css({
+        display: 'block',
+        position: 'absolute',
+        background: '#7519b0',
+        left: '0',
+        top: '77px',
+        width: '100%',
+      });
+        $('.sticky').css("background","rgb(117, 25, 176)")
+    } else {
+      $('.menu-list').hide();
+      window.scrollY < 30 && $('.sticky').css("background","transparent")
+    }
+  });
+
+  
+  window.addEventListener("resize",function() {
+    open = false;
+    window.scrollY < 30 && $('.sticky').css("background","transparent")
+    if (window.innerWidth > 1024) {
+      $('.menu-list').css({
+        display: 'flex',
+        position: 'static',
+        background: 'transparent',
+      });
+    } else {
+      $('.menu-list').hide({
+        height: '0',
+      });
+    }
+  });
   $(window).scroll(function() {
  
     var sticky = $('.sticky'),
@@ -75,14 +78,16 @@ $(function() {
       sticky.removeClass('fixed');
     }
   });
+
+
 });
 
 
 
 
 
-// // delete thisssss !!!!!!!!! its for git deploy
+// delete thisssss !!!!!!!!! its for git deploy
 // $('.nav-item:first-child .nav-link').click(function(e) {
 //   e.preventDefault();
-//   window.location.replace('https://' + window.location.hostname + '/mig');
+//   window.location.replace('https://' + window.location.hostname + '/mig2');
 // });
