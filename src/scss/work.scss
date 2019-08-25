@@ -24,7 +24,7 @@
         margin-bottom: 250px !important;
       }
       .rightside {
-        top: -200px;
+        top: -189px;
         .work-item {
           margin-top: 250px !important;
         }
@@ -33,6 +33,7 @@
 
     @media (max-width: 600px) {
       transform: scale(0.6);
+      margin: -80px auto;
       .leftside {
         left: -100px;
       }
