@@ -16,10 +16,10 @@ import "./visanovleri"
 import "./apply"
 import "./work"
 
-import WOW from 'wow.js';
+// import WOW from 'wow.js';
 
-var wow = new WOW({ offset: 0 });
-wow.init();
+// var wow = new WOW({ offset: 0 });
+// wow.init();
 
 var open = false;
 
