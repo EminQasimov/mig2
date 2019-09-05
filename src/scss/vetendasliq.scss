@@ -181,14 +181,24 @@
     margin: 70px 10px;
     padding: 20px;
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
-    font-size: 18px;
+    font-size: 19px;
     text-align: left;
     display: none;
     background: #fff;
-    min-height: 300px;
+    // min-height: 260px;
+    // text-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+    // font-family: Verdana;
     @media (max-width: 700px) {
       display: none !important;
     }
+  }
+  .redIcon {
+    width: 8px;
+    height: 8px;
+    margin: 2px;
+    background: red;
+    transform: rotate(45deg);
+    display: inline-block;
   }
   .veten-content-hide {
     margin: 70px auto;

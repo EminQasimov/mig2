@@ -9,7 +9,9 @@ $(function() {
       $('.selected-olma').removeClass('selected-olma');
     }
   });
+  $('.olma-content').hide();
   $('.pointer').click(function() {
+    $('.olma-content').show();
     if (window.innerWidth > 1170) {
       var self = this;
       $('.pointer').each(function(index) {

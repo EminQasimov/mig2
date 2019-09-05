@@ -15,9 +15,14 @@ const config = {
   devtool: IS_DEV ? 'eval' : 'source-map',
   entry: './src/js/index.js',
   output: {
-    filename: 'js/[name].[hash].js',
+    filename: 'js/main.js',
     path: path.resolve(__dirname, 'dist'),
   },
+  // output: {
+  //   path: path.resolve(__dirname, 'dist/js'),
+  //   filename: 'main.js'
+  // },
+
   module: {
     rules: [
       {
@@ -117,30 +122,35 @@ const config = {
     ]),
     new MiniCssExtractPlugin({
       filename: IS_DEV ? 'css/[name].css' : 'css/[name].[contenthash].css',
-      chunkFilename: 'css/[id].css',
+      chunkFilename: 'css/main.css',
     }),
     new webpack.HashedModuleIdsPlugin(),
     new PreloadWebpackPlugin({
       include: 'initial',
     }),
     new CssUrlRelativePlugin(),
+    new webpack.optimize.LimitChunkCountPlugin({
+      maxChunks: 1, // disable creating additional chunks
+    }),
   ],
+
   devServer: {
     contentBase: path.join(__dirname, 'src'),
   },
+
   optimization: {
     runtimeChunk: 'single',
-    splitChunks: {
-      cacheGroups: {
-        vendor: {
-          test: /node_modules/,
-          chunks: 'initial',
-          name: 'vendor',
-          priority: 10,
-          enforce: true,
-        },
-      },
-    },
+    // splitChunks: {
+    //   cacheGroups: {
+    //     vendor: {
+    //       test: /node_modules/,
+    //       chunks: 'initial',
+    //       name: 'vendor',
+    //       priority: 10,
+    //       enforce: true,
+    //     },
+    //   },
+    // },
     minimizer: [],
   },
 };
